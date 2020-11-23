@@ -1,2 +1,7 @@
 <h1>Homepage</h1>
+<% if user_signed_in? %>
+  <%= link_to "本一覧をみる", books_url, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "本一覧をみる", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
 
